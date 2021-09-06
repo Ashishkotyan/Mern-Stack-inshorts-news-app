@@ -7,7 +7,9 @@ import Infoheader from './components/infoheader';
 
 const useStyle = makeStyles({
   constainer: {
-    marginTop: 110
+    marginTop: 110,
+    width:'59%',
+    margin:'0 auto'
   }
 
 })
