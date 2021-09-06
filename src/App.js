@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { Box, makeStyles } from '@material-ui/core'
+
+
+//Components
+import Header from './components/Header';
+import Infoheader from './components/infoheader';
+
+const useStyle = makeStyles({
+  constainer: {
+    marginTop: 110
+  }
+
+})
 
 function App() {
+
+  const classes = useStyle();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box>
+      <Header />
+      <Box className = {classes.constainer}>
+        <Infoheader />
+      </Box>
+    </Box>
   );
 }
 
