@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getNews } from '../service/api.js';
+import InfiniteScroll from 'react-infinite-scroll-component';
 
 
 // components
@@ -11,18 +12,19 @@ const Articles = () => {
 
 
     const [news, SetNews] = useState([]);
+    const [page, setPage] = useState(0);
 
     useEffect(() => {
         dailyNews();
 
-    }, [])
+    }, [page])
 
 
     const dailyNews = async () => {
         let response = await getNews();
         SetNews(response.data)
-        console.log("hel")
-        console.log(response);
+
+        console.log(response.data);
     }
 
     return (
@@ -31,6 +33,7 @@ const Articles = () => {
             <Article article={article} />
 
         ))
+
 
 
     )

@@ -1,19 +1,28 @@
 import { Box, makeStyles,Typography } from '@material-ui/core'
 
 
-const useStyle = makeStyles({
+const useStyle = makeStyles(theme => ({
     constainer: {
       background:'#f44336',
       color:'#ffffff',
       height:48,
       display:'flex',
       alignItems:'center',
+      marginBottom:30,
+      [theme.breakpoints.down('md')] : {
+          display:'none',
+          
+          
+      }
+     
+
       
     },
     text: {
         fontSize:14,
         marginLeft:50,
         fontWeight:300,
+        
 
 
     },
@@ -24,7 +33,7 @@ const useStyle = makeStyles({
         }
     }
   
-  })
+  }))
 
 const Infoheader = () => {
     

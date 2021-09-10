@@ -2,10 +2,10 @@ import axios from "axios";
 
 const URL = "http://localhost:8000"
 
-export const getNews = () => {
+export const getNews = async(page, size=5) => {
     try{
 
-        return axios.get(`${URL}/news`);
+        return await axios.get(`${URL}/news?=${page}&size=${size}`);
 
     }catch(error){
         console.log("error while callling api ", error);
