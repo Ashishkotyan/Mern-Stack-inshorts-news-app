@@ -17,6 +17,16 @@ const useStyle = makeStyles({
         margin:'auto',
         paddingRight:70
     },
+     Type_menu: {
+        color:'black',
+        marginBottom:40,
+        marginLeft:5,
+        fontFamily: 'Roboto sans-serif',
+        fontWeight: 300,
+        fontSize:20,
+        color:'#44444d'
+    
+    }
 })
 
 const Header = () => {
@@ -29,7 +39,7 @@ const Header = () => {
         <AppBar className = {classes.header}>
             <Toolbar>
             
-            <Menu  className={classes.menu} />
+            <Menu  className={classes.menu} /> <p className={classes.Type_menu}>Menu</p>
             <img src ={url} alt="logo" className={classes.logo} />
             </Toolbar>
         </AppBar>
